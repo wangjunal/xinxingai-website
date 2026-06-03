@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在线留言 - 心幸爱·喜柿婚恋</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="心幸爱·喜柿婚恋" class="logo-img"><span class="logo-text">心幸爱·喜柿婚恋</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about.html">公司介绍</a></li>
+      <li><a href="services.html">服务项目</a></li>
+      <li><a href="cases.html">成功案例</a></li>
+      <li><a href="events.html">活动中心</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+      <li><a href="message.html" class="active nav-cta">在线留言</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container"><h1>在线留言</h1><p>留下您的信息，红娘老师将在24小时内与您联系</p></div>
+  <div class="hero-shape"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#fff"/></svg></div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="message-grid">
+      <div class="message-form-wrap">
+        <form id="messageForm">
+          <div class="form-group">
+            <label>您的姓名 <span class="required">*</span></label>
+            <input type="text" id="name" placeholder="请输入您的姓名" required>
+          </div>
+          <div class="form-group">
+            <label>手机号码 <span class="required">*</span></label>
+            <input type="tel" id="phone" placeholder="请输入您的手机号码" required>
+            <p class="form-tip">仅用于红娘老师与您联系，严格保密</p>
+          </div>
+          <div class="form-group">
+            <label>性别</label>
+            <select id="gender">
+              <option value="">请选择</option>
+              <option value="男">男</option>
+              <option value="女">女</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>年龄</label>
+            <input type="number" id="age" placeholder="请输入您的年龄" min="18" max="80">
+          </div>
+          <div class="form-group">
+            <label>您的需求 <span class="required">*</span></label>
+            <textarea id="requirement" placeholder="请简单描述您的需求，例如：想找什么样的人、有什么要求等" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">提交留言</button>
+        </form>
+      </div>
+      <div class="message-right">
+        <div class="msg-tip">
+          <h4><i class="fas fa-heart" style="color:var(--primary);margin-right:8px;"></i>提交后会发生什么？</h4>
+          <p>1. 红娘老师在24小时内电话联系您<br>
+          2. 了解您的基本情况和需求<br>
+          3. 为您推荐最合适的服务方案<br>
+          4. 安排首次约见或参加活动</p>
+        </div>
+        <div class="msg-tip">
+          <h4><i class="fas fa-shield-alt" style="color:var(--primary);margin-right:8px;"></i>隐私保障</h4>
+          <p>您提交的所有信息仅用于婚恋服务，未经您授权绝不泄露给第三方。我们采用严格的信息管理制度，保障您的隐私安全。</p>
+        </div>
+        <div class="msg-tip">
+          <h4><i class="fas fa-phone-alt" style="color:var(--primary);margin-right:8px;"></i>紧急联系</h4>
+          <p>如需立即咨询，请直接拨打：<br><strong style="color:var(--primary);font-size:1.2rem;">185-1234-5678</strong><br>周一至周日 9:00-21:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-info"><img src="images/logo.png" alt="心幸爱·喜柿婚恋" class="footer-logo"><p>让认真寻找爱情的人遇见对的人</p><div class="footer-social"><a href="#"><i class="fab fa-weixin"></i></a><a href="#"><i class="fab fa-weibo"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div>
+      <div class="footer-links"><h4>快速导航</h4><ul><li><a href="about.html">公司介绍</a></li><li><a href="services.html">服务项目</a></li><li><a href="cases.html">成功案例</a></li><li><a href="events.html">活动中心</a></li></ul></div>
+      <div class="footer-links"><h4>服务项目</h4><ul><li><a href="services.html">婚恋介绍</a></li><li><a href="services.html">一对一红娘</a></li><li><a href="services.html">线下活动</a></li><li><a href="services.html">婚恋咨询</a></li></ul></div>
+      <div class="footer-contact"><h4>联系我们</h4><p><i class="fas fa-phone"></i> 咨询热线</p><p><i class="fab fa-weixin"></i> 微信：xinxingai</p><p><i class="fas fa-envelope"></i> 邮箱：contact@xinxingai.com</p><p><i class="fas fa-map-marker-alt"></i> 黔西南·兴义</p></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 心幸爱·喜柿婚恋 All Rights Reserved.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
