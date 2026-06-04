@@ -1,202 +1,157 @@
 <!DOCTYPE html>
-
 <html lang="zh-CN">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>在线留言 - 兴义婚介_心幸爱喜柿婚恋</title>
-
-  <meta name="description" content="心幸爱·喜柿婚恋在线预约咨询，留下您的信息，红娘老师将在24小时内与您联系。">
-
+  <title>在线预约红娘咨询｜心幸爱·喜柿婚恋</title>
+  <meta name="description" content="在线预约心幸爱·喜柿婚恋红娘咨询，提交姓名、手机号和婚恋需求后，信息将发送到公司邮箱，红娘老师会尽快联系您。">
+  <link rel="canonical" href="https://www.xshlxx.com/message.html">
   <link rel="stylesheet" href="css/style.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
-
 <body>
-
 <nav class="navbar">
-
   <div class="container nav-container">
-
-    <a href="index.html" class="logo"><img src="images/logo.png" alt="心幸爱·喜柿婚恋" class="logo-img"><!-- logo-text removed --></a>
-
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="心幸爱·喜柿婚恋" class="logo-img"></a>
+    <button class="hamburger" id="hamburger" aria-label="打开导航菜单"><span></span><span></span><span></span></button>
     <ul class="nav-menu" id="navMenu">
-
       <li><a href="index.html">首页</a></li>
-
       <li><a href="about.html">公司介绍</a></li>
-
       <li><a href="services.html">服务项目</a></li>
-
       <li><a href="hongniang.html">红娘团队</a></li>
-
       <li><a href="process.html">入驻流程</a></li>
-
       <li><a href="cases.html">成功案例</a></li>
-
       <li><a href="events.html">活动中心</a></li>
-
       <li><a href="contact.html">联系我们</a></li>
-
       <li><a href="message.html" class="active nav-cta">在线留言</a></li>
-
     </ul>
-
   </div>
-
 </nav>
 
-
-
 <section class="page-hero">
-
-  <div class="container"><h1>在线留言</h1><p>留下您的信息，红娘老师将在24小时内与您联系</p></div>
-
+  <div class="container">
+    <h1>在线预约红娘咨询</h1>
+    <p>提交后信息会发送到公司邮箱，红娘老师将在24小时内联系您</p>
+  </div>
   <div class="hero-shape"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#fff"/></svg></div>
-
 </section>
 
-
-
 <section class="section">
-
   <div class="container">
-
     <div class="message-grid">
-
       <div class="message-form-wrap">
+        <div class="form-intro">
+          <p class="form-kicker">信息接收邮箱</p>
+          <h2>wangjunal@foxmail.com</h2>
+          <p>请尽量填写真实信息，方便红娘老师判断您的需求并及时联系。</p>
+        </div>
 
-        <form id="messageForm">
+        <form id="messageForm" action="https://formsubmit.co/ajax/wangjunal@foxmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="心幸爱·喜柿婚恋 - 新预约咨询">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" value="您好，心幸爱·喜柿婚恋已收到您的预约信息，红娘老师会尽快与您联系。">
 
           <div class="form-group">
-
-            <label>您的姓名 <span class="required">*</span></label>
-
-            <input type="text" id="name" placeholder="请输入您的姓名" required>
-
+            <label for="name">您的姓名 <span class="required">*</span></label>
+            <input type="text" id="name" name="姓名" placeholder="请输入您的姓名" autocomplete="name" required>
           </div>
 
           <div class="form-group">
+            <label for="phone">联系电话 <span class="required">*</span></label>
+            <input type="tel" id="phone" name="联系电话" placeholder="请输入您的手机号" inputmode="numeric" autocomplete="tel" required>
+            <p class="form-tip">请填写11位手机号，方便红娘老师回访。</p>
+          </div>
 
-            <label>联系电话 <span class="required">*</span></label>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="gender">您的性别</label>
+              <select id="gender" name="性别">
+                <option value="">请选择</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+              </select>
+            </div>
 
-            <input type="tel" id="phone" placeholder="请输入您的手机号" required>
-
+            <div class="form-group">
+              <label for="age">您的年龄</label>
+              <input type="number" id="age" name="年龄" placeholder="例如：28" min="18" max="80" inputmode="numeric">
+            </div>
           </div>
 
           <div class="form-group">
+            <label for="city">所在地区</label>
+            <input type="text" id="city" name="所在地区" placeholder="例如：兴义 / 兴仁 / 贞丰">
+          </div>
 
-            <label>您的性别</label>
-
-            <select id="gender">
-
-              <option value="">请选择</option>
-
-              <option value="male">男</option>
-
-              <option value="female">女</option>
-
+          <div class="form-group">
+            <label for="serviceType">想咨询的内容</label>
+            <select id="serviceType" name="咨询内容">
+              <option value="红娘婚恋咨询">红娘婚恋咨询</option>
+              <option value="报名线下相亲活动">报名线下相亲活动</option>
+              <option value="加入会员资料库">加入会员资料库</option>
+              <option value="红娘/咨询点合作">红娘/咨询点合作</option>
+              <option value="其他">其他</option>
             </select>
-
           </div>
 
           <div class="form-group">
-
-            <label>您的年龄</label>
-
-            <input type="number" id="age" placeholder="请输入您的年龄" min="18" max="80">
-
+            <label for="requirement">您的需求 <span class="required">*</span></label>
+            <textarea id="requirement" name="具体需求" placeholder="请简单描述您的情况和需求，例如：年龄、工作、择偶要求、是否想参加线下活动等。" required></textarea>
           </div>
 
-          <div class="form-group">
+          <label class="privacy-check">
+            <input type="checkbox" id="privacyAgree" checked required>
+            <span>我同意将以上信息用于本次婚恋咨询回访。</span>
+          </label>
 
-            <label>您的需求 <span class="required">*</span></label>
-
-            <textarea id="requirement" placeholder="请简单描述您的需求，例如：想找什么样的人、有什么要求等" required></textarea>
-
-          </div>
-
-          <button type="submit" class="btn btn-primary form-submit">提交留言</button>
-
+          <button type="submit" class="btn btn-primary form-submit">提交并发送到邮箱</button>
+          <p class="form-safe-note">提交目标邮箱：wangjunal@foxmail.com。如遇网络问题，页面会自动打开邮件客户端作为备用发送方式。</p>
         </form>
-
       </div>
 
       <div class="message-right">
-
-        <div class="msg-tip">
-
-          <h4><i class="fas fa-heart" style="color:var(--primary);margin-right:8px;"></i>提交后会发生什么？</h4>
-
-          <p>1. 红娘老师在24小时内电话联系您<br>
-
-          2. 了解您的基本情况和需求<br>
-
-          3. 为您推荐最合适的服务方案<br>
-
-          4. 安排首次约见或参加活动</p>
-
+        <div class="msg-tip msg-tip-strong">
+          <h4><i class="fas fa-heart"></i>提交后会发生什么？</h4>
+          <p>1. 系统把您的预约信息发送到公司邮箱<br>
+          2. 红娘老师在24小时内电话或微信联系您<br>
+          3. 初步了解您的基本情况和择偶需求<br>
+          4. 推荐适合您的服务、活动或首次面谈安排</p>
         </div>
 
         <div class="msg-tip">
-
-          <h4><i class="fas fa-shield-alt" style="color:var(--primary);margin-right:8px;"></i>隐私保障</h4>
-
-          <p>您提交的所有信息仅用于婚恋服务，未经您授权绝不泄露给第三方。我们采用严格的信息管理制度，保障您的隐私安全。</p>
-
+          <h4><i class="fas fa-shield-alt"></i>隐私保障</h4>
+          <p>您提交的信息仅用于心幸爱·喜柿婚恋服务回访，不会未经授权随意公开或提供给无关第三方。</p>
         </div>
 
         <div class="msg-tip">
-
-          <h4><i class="fas fa-phone-alt" style="color:var(--primary);margin-right:8px;"></i>紧急联系</h4>
-
-          <p>如需立即咨询，请直接拨打：<br><strong style="color:var(--primary);font-size:1.2rem;">193-2948-6887</strong><br>周一至周日 9:00-21:00</p>
-
+          <h4><i class="fas fa-phone-alt"></i>立即联系</h4>
+          <p>电话 / 微信：<br><strong>193-2948-6887</strong><br>周一至周日 9:00-21:00</p>
+          <a href="tel:19329486887" class="btn btn-primary contact-mini-btn">拨打电话</a>
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
-
-
 <footer class="footer">
-
   <div class="container">
-
     <div class="footer-grid">
-
-      <div class="footer-info"><img src="images/logo.png" alt="心幸爱·喜柿婚恋" class="footer-logo"><p>让认真寻找爱情的人遇见对的人</p><div class="footer-social"><a href="#"><i class="fab fa-weixin"></i></a><a href="#"><i class="fab fa-weibo"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div>
-
+      <div class="footer-info"><img src="images/logo.png" alt="心幸爱·喜柿婚恋" class="footer-logo"><p>让认真寻找爱情的人遇见对的人</p><div class="footer-social"><a href="message.html" aria-label="微信咨询"><i class="fab fa-weixin"></i></a><a href="events.html" aria-label="活动中心"><i class="fas fa-calendar-alt"></i></a><a href="contact.html" aria-label="联系我们"><i class="fas fa-phone"></i></a></div></div>
       <div class="footer-links"><h4>快速导航</h4><ul><li><a href="about.html">公司介绍</a></li><li><a href="hongniang.html">红娘团队</a></li><li><a href="process.html">入驻流程</a></li><li><a href="services.html">服务项目</a></li><li><a href="cases.html">成功案例</a></li><li><a href="events.html">活动中心</a></li></ul></div>
-
       <div class="footer-links"><h4>服务项目</h4><ul><li><a href="services.html">基础服务</a></li><li><a href="services.html">专属红娘服务</a></li><li><a href="services.html">VIP定制服务</a></li><li><a href="services.html">婚恋咨询</a></li></ul></div>
-
-      <div class="footer-contact"><h4>联系我们</h4><p><i class="fas fa-phone"></i> 咨询热线：19329486887</p><p><i class="fab fa-weixin"></i> 微信：19329486887</p><p><i class="fas fa-envelope"></i> 邮箱：wangjunal@gmail.com</p><p><i class="fas fa-map-marker-alt"></i> 贵州省黔西南州兴义市桔山大道保地华庭三栋二楼</p></div>
-
+      <div class="footer-contact"><h4>联系我们</h4><p><i class="fas fa-phone"></i> 咨询热线：19329486887</p><p><i class="fab fa-weixin"></i> 微信：19329486887</p><p><i class="fas fa-envelope"></i> 邮箱：wangjunal@foxmail.com</p><p><i class="fas fa-map-marker-alt"></i> 贵州省黔西南州兴义市桔山大道保地华庭三栋二楼</p></div>
     </div>
-
     <div class="footer-bottom"><p>贵州省喜柿婚姻服务有限公司 &copy; 2026 All Rights Reserved.</p><p style="margin-top:8px;font-size:0.8rem;opacity:0.6;">统一社会信用代码：以营业执照为准</p></div>
-
   </div>
-
 </footer>
 
+<div class="mobile-contact-bar" aria-label="快捷咨询">
+  <a href="tel:19329486887"><i class="fas fa-phone"></i><span>电话</span></a>
+  <a href="message.html"><i class="fab fa-weixin"></i><span>加微信</span></a>
+  <a href="message.html"><i class="fas fa-pen-to-square"></i><span>预约</span></a>
+</div>
+
 <script src="js/main.js"></script>
-
 </body>
-
 </html>
-
