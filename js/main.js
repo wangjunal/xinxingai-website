@@ -110,9 +110,8 @@ if (messageForm) {
     }
 
     try {
-      // 使用 EmailJS 发送邮件（用户需自行注册 EmailJS）
-      // 这里使用 Formspree 作为备选方案
-      const response = await fetch('https://formspree.io/f/your-form-id', {
+      // 使用 Formspree 发送邮件到 wangjunal@gmail.com
+      const response = await fetch('https://formspree.io/f/mvgoapjj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -129,18 +128,10 @@ if (messageForm) {
         showSuccessToast();
         messageForm.reset();
       } else {
-        // Formspree 失败时，尝试使用 mailto 作为备选
-        const mailtoLink = `mailto:admin@xinxingai.com?subject=心幸爱·喜柿婚恋 - 新留言咨询&body=姓名：${encodeURIComponent(formData.name)}%0A电话：${encodeURIComponent(formData.phone)}%0A性别：${encodeURIComponent(formData.gender)}%0A年龄：${encodeURIComponent(formData.age)}%0A需求：${encodeURIComponent(formData.requirement)}`;
-        window.open(mailtoLink);
-        showSuccessToast();
-        messageForm.reset();
+        showToast('提交失败，请直接拨打 19329486887 联系我们');
       }
     } catch (err) {
-      // 网络错误时使用 mailto 备选
-      const mailtoLink = `mailto:admin@xinxingai.com?subject=心幸爱·喜柿婚恋 - 新留言咨询&body=姓名：${encodeURIComponent(formData.name)}%0A电话：${encodeURIComponent(formData.phone)}%0A性别：${encodeURIComponent(formData.gender)}%0A年龄：${encodeURIComponent(formData.age)}%0A需求：${encodeURIComponent(formData.requirement)}`;
-      window.open(mailtoLink);
-      showSuccessToast();
-      messageForm.reset();
+      showToast('网络错误，请直接拨打 19329486887 联系我们');
     } finally {
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
