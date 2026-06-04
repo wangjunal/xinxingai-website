@@ -52,8 +52,8 @@ img { max-width: 100%; }
 .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
 .logo { display: flex; align-items: center; gap: 10px; }
-.logo-img { height: 40px; width: auto; }
-.logo-text { font-size: 1.2rem; font-weight: 700; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.logo-img { height: 55px; width: auto; }
+.logo-text { display: none; }
 .nav-menu { display: flex; align-items: center; gap: 8px; }
 .nav-menu li a { padding: 8px 18px; border-radius: 50px; font-size: 0.95rem; font-weight: 500; color: var(--text-gray); transition: all .3s ease; }
 .nav-menu li a:hover, .nav-menu li a.active { color: var(--primary); background: rgba(255,107,138,0.08); }
@@ -85,6 +85,15 @@ img { max-width: 100%; }
 .feature-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--text-dark); }
 .feature-card p { font-size: 0.95rem; color: var(--text-gray); line-height: 1.7; }
 
+/* ====== 红娘团队 ====== */
+.hongniang-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; }
+.hongniang-card { background: var(--bg-white); padding: 40px 30px; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); transition: all .4s ease; border: 1px solid rgba(255,107,138,0.06); }
+.hongniang-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+.hn-avatar { width: 90px; height: 90px; margin: 0 auto 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #fff; }
+.hongniang-card h3 { font-size: 1.2rem; margin-bottom: 4px; color: var(--text-dark); }
+.hongniang-card .hn-title { font-size: 0.85rem; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
+.hongniang-card .hn-desc { font-size: 0.9rem; color: var(--text-gray); line-height: 1.7; }
+
 /* ====== 服务概览 ====== */
 .services-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
 .service-card { background: var(--bg-white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: all .4s ease; text-align: center; padding-bottom: 30px; }
@@ -106,9 +115,7 @@ img { max-width: 100%; }
 .case-card { background: var(--bg-white); padding: 40px 30px; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); transition: all .4s ease; border: 1px solid rgba(255,107,138,0.06); }
 .case-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .case-avatar { width: 60px; height: 60px; margin: 0 auto 20px; background: var(--gradient-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary); }
-.case-quote { font-size: 0.95rem; color: var(--text-gray); font-style: italic; line-height: 1.8; margin-bottom: 16px; }
-.case-couple { font-size: 1.05rem; font-weight: 600; color: var(--primary); margin-bottom: 4px; }
-.case-date { font-size: 0.85rem; color: var(--text-light); }
+.case-meta { font-size: 0.95rem; color: var(--text-gray); line-height: 1.8; margin-bottom: 4px; }
 
 /* ====== CTA ====== */
 .cta { background: var(--gradient-hero); color: #fff; text-align: center; }
@@ -118,7 +125,7 @@ img { max-width: 100%; }
 /* ====== 页脚 ====== */
 .footer { background: #2d2d2d; color: rgba(255,255,255,0.8); padding: 60px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footer-logo { height: 36px; margin-bottom: 16px; }
+.footer-logo { height: 50px; margin-bottom: 16px; }
 .footer-info p { font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
 .footer-social { display: flex; gap: 12px; }
 .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: all .3s ease; }
@@ -255,6 +262,15 @@ img { max-width: 100%; }
   .case-detail-card { flex-direction: column; }
   .case-detail-card .case-side { width: 100%; min-height: 80px; }
 }
+
+/* ====== 入驻流程 ====== */
+.process-timeline { max-width: 700px; margin: 0 auto; }
+.process-step { display: flex; gap: 24px; margin-bottom: 40px; align-items: flex-start; }
+.process-step:last-child { margin-bottom: 0; }
+.step-num { width: 50px; height: 50px; border-radius: 50%; background: var(--gradient-main); color: #fff; font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.step-content { flex: 1; padding-top: 6px; }
+.step-content h3 { font-size: 1.2rem; color: var(--text-dark); margin-bottom: 8px; }
+.step-content p { font-size: 0.95rem; color: var(--text-gray); line-height: 1.8; }
 
 /* ====== 成功提示弹窗 ====== */
 .toast { position: fixed; top: 100px; left: 50%; transform: translateX(-50%) translateY(-20px); background: #fff; padding: 20px 40px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); z-index: 9999; opacity: 0; transition: all .4s ease; text-align: center; border-top: 4px solid var(--primary); }

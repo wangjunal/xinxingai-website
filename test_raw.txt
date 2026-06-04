@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>兴义婚介_兴义相亲_兴义婚恋服务_心幸爱喜柿婚恋</title>
-  <meta name="keywords" content="兴义婚介,兴义相亲,兴义婚恋,黔西南婚介,黔西南相亲">
-  <meta name="description" content="心幸爱·喜柿婚恋是兴义本地婚恋服务平台，提供实名认证会员、专业红娘服务、线下相亲活动，让认真寻找爱情的人遇见对的人。">
+  <title>心幸爱·喜柿婚恋 - 让认真寻找爱情的人遇见对的人</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -16,7 +14,7 @@
   <div class="container nav-container">
     <a href="index.html" class="logo">
       <img src="images/logo.png" alt="心幸爱·喜柿婚恋" class="logo-img">
-      <!-- logo-text removed -->
+      <span class="logo-text">心幸爱·喜柿婚恋</span>
     </a>
     <button class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
@@ -36,11 +34,11 @@
 <!-- ====== Hero 首屏 ====== -->
 <section class="hero">
   <div class="container hero-content">
-    <h1 class="hero-title">兴义本地婚恋服务平台</h1>
-    <p class="hero-subtitle">实名认证会员 · 专业红娘服务 · 线下相亲活动<br>让认真寻找爱情的人遇见对的人</p>
+    <h1 class="hero-title">让认真寻找爱情的人<br>遇见对的人</h1>
+    <p class="hero-subtitle">心幸爱·喜柿婚恋 — 黔西南本地高端婚恋服务平台</p>
     <div class="hero-btns">
-      <a href="message.html" class="btn btn-primary">立即咨询红娘</a>
-      <a href="message.html" class="btn btn-outline">免费匹配对象</a>
+      <a href="message.html" class="btn btn-primary">立即咨询</a>
+      <a href="about.html" class="btn btn-outline">了解更多</a>
     </div>
   </div>
   <div class="hero-shape">
@@ -125,35 +123,26 @@
   </div>
 </section>
 
-<!-- ====== 红娘团队 ====== -->
-<section class="hongniang-preview section">
+<!-- ====== 数据统计 ====== -->
+<section class="stats section">
   <div class="container">
-    <div class="section-header">
-      <h2>专业红娘团队</h2>
-      <p>资深婚恋顾问，用心服务每一位会员</p>
-    </div>
-    <div class="hongniang-grid">
-      <div class="hongniang-card">
-        <div class="hn-avatar" style="background:linear-gradient(135deg,#ff9a9e,#fad0c4)"><i class="fas fa-female"></i></div>
-        <h3>王老师</h3>
-        <p class="hn-title">资深婚恋顾问</p>
-        <p class="hn-desc">擅长：80后婚恋匹配、90后婚恋指导、离异再婚咨询</p>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+        <p>成功牵手</p>
       </div>
-      <div class="hongniang-card">
-        <div class="hn-avatar" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)"><i class="fas fa-female"></i></div>
-        <h3>李老师</h3>
-        <p class="hn-title">高级红娘</p>
-        <p class="hn-desc">擅长：性格分析、情感沟通指导、恋爱技巧培训</p>
+      <div class="stat-item">
+        <span class="stat-number" data-target="3000">0</span><span class="stat-plus">+</span>
+        <p>注册会员</p>
       </div>
-      <div class="hongniang-card">
-        <div class="hn-avatar" style="background:linear-gradient(135deg,#fccb90,#d57eeb)"><i class="fas fa-female"></i></div>
-        <h3>张老师</h3>
-        <p class="hn-title">情感导师</p>
-        <p class="hn-desc">擅长：婚恋心理学、亲密关系修复、个人形象提升</p>
+      <div class="stat-item">
+        <span class="stat-number" data-target="200">0</span><span class="stat-plus">+</span>
+        <p>线下活动</p>
       </div>
-    </div>
-    <div class="text-center mt-4">
-      <a href="hongniang.html" class="btn btn-primary">了解红娘团队</a>
+      <div class="stat-item">
+        <span class="stat-number" data-target="98">0</span><span class="stat-percent">%</span>
+        <p>客户满意</p>
+      </div>
     </div>
   </div>
 </section>
@@ -163,29 +152,26 @@
   <div class="container">
     <div class="section-header">
       <h2>成功案例</h2>
-      <p>真实案例，事实说话</p>
+      <p>每一段幸福，都从勇敢开始</p>
     </div>
     <div class="cases-grid">
       <div class="case-card">
         <div class="case-avatar"><i class="fas fa-heart"></i></div>
-        <p class="case-meta">男 32岁 · 兴义事业单位</p>
-        <p class="case-meta">女 29岁 · 教师</p>
-        <p class="case-meta">认识时间：2025年11月</p>
-        <p class="case-meta">确定关系：2026年1月</p>
+        <p class="case-quote">"感谢红娘老师的耐心匹配，让我们在最美的年纪相遇。"</p>
+        <p class="case-couple">张先生 & 李女士</p>
+        <p class="case-date">2025年12月结婚</p>
       </div>
       <div class="case-card">
         <div class="case-avatar"><i class="fas fa-heart"></i></div>
-        <p class="case-meta">男 36岁 · 离异</p>
-        <p class="case-meta">女 34岁 · 离异</p>
-        <p class="case-meta">通过红娘老师推荐认识</p>
-        <p class="case-meta">目前已订婚</p>
+        <p class="case-quote">"参加线下活动认识了她，一见如故，这就是缘分吧。"</p>
+        <p class="case-couple">王先生 & 赵女士</p>
+        <p class="case-date">2026年3月结婚</p>
       </div>
       <div class="case-card">
         <div class="case-avatar"><i class="fas fa-heart"></i></div>
-        <p class="case-meta">男 28岁 · 个体经营</p>
-        <p class="case-meta">女 27岁 · 护士</p>
-        <p class="case-meta">认识时间：2026年2月</p>
-        <p class="case-meta">确定关系：2026年4月</p>
+        <p class="case-quote">"红娘老师比我还了解我自己，推荐的人真的很合适。"</p>
+        <p class="case-couple">陈先生 & 刘女士</p>
+        <p class="case-date">2026年1月订婚</p>
       </div>
     </div>
     <div class="text-center mt-4">
@@ -243,8 +229,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>贵州心幸爱婚恋服务有限公司 &copy; 2026 All Rights Reserved.</p>
-      <p style="margin-top:8px;font-size:0.8rem;opacity:0.6;">统一社会信用代码：以营业执照为准</p>
+      <p>&copy; 2026 心幸爱·喜柿婚恋 All Rights Reserved.</p>
     </div>
   </div>
 </footer>
