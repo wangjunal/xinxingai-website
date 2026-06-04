@@ -110,7 +110,7 @@ if (messageForm) {
     }
 
     try {
-      // 使用 Formspree 发送邮件到 wangjunal@gmail.com
+      // 使用 Formspree 发送邮件到 wangjunal@foxmail.com
       const response = await fetch('https://formspree.io/f/mvgoapjj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -120,7 +120,8 @@ if (messageForm) {
           gender: formData.gender,
           age: formData.age,
           requirement: formData.requirement,
-          _subject: '心幸爱·喜柿婚恋 - 新留言咨询'
+          _subject: '心幸爱·喜柿婚恋 - 新留言咨询',
+          _replyto: 'wangjunal@foxmail.com'
         })
       });
 
@@ -128,10 +129,18 @@ if (messageForm) {
         showSuccessToast();
         messageForm.reset();
       } else {
-        showToast('提交失败，请直接拨打 19329486887 联系我们');
+        // Formspree 失败时用 mailto 备选
+        const mailtoBody = '姓名：' + encodeURIComponent(formData.name) + '%0A电话：' + encodeURIComponent(formData.phone) + '%0A性别：' + encodeURIComponent(formData.gender) + '%0A年龄：' + encodeURIComponent(formData.age) + '%0A需求：' + encodeURIComponent(formData.requirement);
+        window.location.href = 'mailto:wangjunal@foxmail.com?subject=' + encodeURIComponent('心幸爱·喜柿婚恋 - 新留言咨询') + '&body=' + mailtoBody;
+        showSuccessToast();
+        messageForm.reset();
       }
     } catch (err) {
-      showToast('网络错误，请直接拨打 19329486887 联系我们');
+      // 网络错误时用 mailto 备选
+      const mailtoBody = '姓名：' + encodeURIComponent(formData.name) + '%0A电话：' + encodeURIComponent(formData.phone) + '%0A性别：' + encodeURIComponent(formData.gender) + '%0A年龄：' + encodeURIComponent(formData.age) + '%0A需求：' + encodeURIComponent(formData.requirement);
+      window.location.href = 'mailto:wangjunal@foxmail.com?subject=' + encodeURIComponent('心幸爱·喜柿婚恋 - 新留言咨询') + '&body=' + mailtoBody;
+      showSuccessToast();
+      messageForm.reset();
     } finally {
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
