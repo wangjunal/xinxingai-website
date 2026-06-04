@@ -263,6 +263,11 @@ img { max-width: 100%; }
   .case-detail-card .case-side { width: 100%; min-height: 80px; }
 }
 
+/* ====== 红娘团队照片 ====== */
+.hongniang-photo { text-align: center; margin-bottom: 20px; }
+.hongniang-img { max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
+.hongniang-caption { margin-top: 12px; font-size: 0.95rem; color: var(--text-gray); font-weight: 500; }
+
 /* ====== 入驻流程 ====== */
 .process-timeline { max-width: 700px; margin: 0 auto; }
 .process-step { display: flex; gap: 24px; margin-bottom: 40px; align-items: flex-start; }
