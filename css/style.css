@@ -102,6 +102,18 @@ img { max-width: 100%; display: block; }
 .story-points li { display: flex; gap: 10px; color: var(--ink); font-weight: 650; }
 .story-points li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 12px; flex-shrink: 0; }
 
+.registration-promo { background: linear-gradient(135deg, rgba(255,255,255,0.76) 0%, rgba(255,241,240,0.72) 54%, rgba(243,247,240,0.68) 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.registration-layout { display: grid; grid-template-columns: minmax(320px, .86fr) minmax(0, 1.14fr); gap: 46px; align-items: center; }
+.registration-copy .eyebrow { color: var(--primary); font-weight: 900; font-size: 0.9rem; margin-bottom: 12px; }
+.registration-copy h2 { font-size: clamp(1.9rem, 3.4vw, 3rem); line-height: 1.18; margin-bottom: 18px; }
+.registration-copy p { color: var(--muted); line-height: 1.9; margin-bottom: 24px; }
+.registration-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 22px; }
+.registration-points { display: flex; gap: 10px; flex-wrap: wrap; }
+.registration-points li { padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.78); border: 1px solid rgba(233,111,114,0.14); color: var(--primary-dark); font-size: 0.88rem; font-weight: 800; }
+.registration-poster { display: block; max-width: 560px; justify-self: end; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid rgba(43,41,38,0.1); background: #fff; transform: rotate(1.2deg); transition: transform .3s ease, box-shadow .3s ease; }
+.registration-poster:hover { transform: rotate(0deg) translateY(-4px); box-shadow: 0 30px 78px rgba(93,64,55,0.18); }
+.registration-poster img { width: 100%; height: auto; }
+
 .cta { background: linear-gradient(135deg, #2b2926 0%, #4d3b36 100%); color: #fff; text-align: center; position: relative; overflow: hidden; }
 .cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 24% 22%, rgba(233,111,114,0.25), transparent 30%), radial-gradient(circle at 76% 64%, rgba(143,174,155,0.22), transparent 26%); }
 .cta .container { position: relative; z-index: 1; }
@@ -232,6 +244,10 @@ img { max-width: 100%; display: block; }
   .hero-title { font-size: clamp(1.95rem, 8.1vw, 2.45rem); }
   .hero-btns { flex-direction: column; align-items: stretch; }
   .features-grid, .services-grid, .trust-grid, .values-grid, .service-detail-grid, .cases-detail-grid, .events-grid, .contact-grid, .message-grid { grid-template-columns: 1fr; }
+  .registration-layout { grid-template-columns: 1fr; gap: 30px; }
+  .registration-copy { text-align: center; }
+  .registration-actions, .registration-points { justify-content: center; }
+  .registration-poster { justify-self: center; max-width: 430px; transform: none; }
   .visual-story-media, .visual-story-media img { min-height: 300px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .message-form-wrap { padding: 26px 20px; }
